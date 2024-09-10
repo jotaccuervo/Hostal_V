@@ -1,0 +1,27 @@
+BD hotel_db
+
+CREATE TABLE clientes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    apellidos VARCHAR(255) NOT NULL,
+    dni VARCHAR(20) NOT NULL,
+    sexo VARCHAR(10),
+    fecha_nacimiento DATE,
+    pais VARCHAR(100),
+    provincia VARCHAR(100),
+    ciudad VARCHAR(100),
+    codigo_postal VARCHAR(20),
+    direccion VARCHAR(255),
+    telefono VARCHAR(20),
+    observacion TEXT
+);
+
+CREATE TABLE reservas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    num_habitacion VARCHAR(10) NOT NULL,
+    fecha_entrada DATE NOT NULL,
+    fecha_salida DATE NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    observacion TEXT
+);
+
